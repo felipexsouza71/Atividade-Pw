@@ -1,0 +1,195 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  background:#ffffff;
+  color:white;
+  padding:20px;
+}
+.cabecalho{
+  text-align:center;
+
+  margin-bottom:40px;
+}
+
+.cabecalho h1{
+  font-size:3rem;
+
+  margin-bottom:10px;
+}
+
+.cabecalho p{
+  font-size:1.1rem;
+}
+
+.legenda{
+  margin-bottom:40px;
+}
+
+.legenda h2{
+  text-align:center;
+
+  margin-bottom:20px;
+}
+
+.legenda-container{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+}
+.legenda-item{
+  padding:10px 15px;
+  border-radius:10px;
+  font-weight:bold;
+  box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+.tabela{
+  display:grid;
+  grid-template-columns:repeat(18, 1fr);
+  gap:10px;
+  justify-items:center;
+}
+.elemento{
+  width:80px;
+  height:80px;
+  padding:5px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  text-align:center;
+  transition:.3s;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
+  animation:aparecer .5s ease;
+}
+.elemento:hover{
+  transform:scale(1.1);
+  cursor:pointer;
+  filter:brightness(1.1);
+}
+.elemento span{
+  font-size:.7rem;
+
+  text-align:left;
+}
+.elemento h2{
+  font-size:1.5rem;
+
+  font-weight:700;
+}
+.elemento p{
+  font-size:.6rem;
+}
+
+.secao-especial{
+  margin-top:50px;
+}
+
+.secao-especial h2{
+  margin-bottom:5px;
+
+  text-align:center;
+}
+
+.linha-especial{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:10px;
+}
+
+.nao-metal{
+  background:#43aa8b;
+}
+
+.gas-nobre{
+  background:#577590;
+}
+
+.alcalino{
+  background:#f94144;
+}
+
+.alcalino-terroso{
+  background:#f3722c;
+}
+
+.halogenio{
+  background:#90be6d;
+}
+
+.semimetal{
+  background:#277da1;
+}
+
+.outros-metais{
+  background:#4d908e;
+}
+
+.transicao{
+  background:#f9c74f;
+
+  color:black;
+}
+
+.lantanideo{
+  background:#c77dff;
+}
+
+.actinideo{
+  background:#ff70a6;
+}
+@keyframes aparecer{
+  from{
+    opacity:0;
+
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+@media(max-width:1200px){
+  .elemento{
+    width:70px;
+    height:70px;
+  }
+}
+@media(max-width:900px){
+  .elemento{
+    width:80px;
+    height:80px;
+  }
+  .elemento h2{
+    font-size:1rem;
+  }
+  .elemento p{
+    font-size:.3rem;
+  }
+}
+@media(max-width:700px){
+  .tabela{
+    grid-template-columns:repeat(9, 1fr);
+  }
+}
+@media(max-width:500px){
+  .tabela{
+    grid-template-columns:repeat(6, 1fr);
+  }
+  .cabecalho h1{
+    font-size:2rem;
+  }
+}
